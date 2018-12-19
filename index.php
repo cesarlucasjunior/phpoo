@@ -1,5 +1,39 @@
+<pre>
 <?php
-	//Importando arquivo Caneta.php
+
+	require_once 'ContaBancaria.php';
+	
+	$c1 = new ContaBancaria(); //Júnior
+	$c1->abrirConta('CP');
+	$c1->setDono("César Júnior");
+	$c1->setNumeroConta("11111");
+	$c1->depositar(100);
+	$c1->pagarMensalidade();
+
+
+
+
+
+	$c2 = new ContaBancaria(); //Marcela
+	$c2->abrirConta('CC');
+	$c2->setDono("Marcela");
+	$c2->setNumeroConta("22222");
+	$c2->depositar(50);
+	$c2->sacar(50);
+	$c2->pagarMensalidade();
+
+	print_r($c1);
+	print_r($c2);
+
+
+
+
+
+
+?>
+</pre>
+
+<!-- Importando arquivo Caneta.php
 	
 	require_once 'Caneta.php';
 	require_once 'Pessoa.php';
@@ -37,7 +71,10 @@
 	$c2 -> tampada = false;
 
 	print_r($c2);*/ 
-?>
+	-->
+
+
+
 
 
 <!--if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
