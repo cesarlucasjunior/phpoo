@@ -23,6 +23,27 @@
 			$this->tampada = false;
 
 		}
+
+		public function setModelo($m){
+			$this->modelo = $m;
+		}
+
+		public function getModelo(){
+			return $this->modelo;
+		}
+
+		public function setCor($cor){
+			$this->cor = $cor;
+		}
+
+		public function getCor(){
+			return $this->cor;
+		}
+
+		
+
+
+
 	}
 
 ?>
