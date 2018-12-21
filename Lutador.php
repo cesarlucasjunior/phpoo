@@ -25,8 +25,6 @@
 			$this->empates = $em;
 		}
 
-
-
 		public function getNome(){
 			return $this->nome;
 		}
@@ -75,45 +73,43 @@
 		public function setCategoria(){
 			if($this->peso < 52.2){
 				$this->categoria = "Inválido";
-			} else if ($this->peso < 70.3){
+			} elseif ($this->peso < 70.3){
 				$this->categoria = "Leve";
-			} else if ($this->peso < 83.9){
+			} elseif ($this->peso < 83.9){
 				$this->categoria = "Médio";
-			} else if ($this->peso <= 120.2){
-				$this->categoria = "Pesado"
+			} elseif ($this->peso <= 120.2){
+				$this->categoria = "Pesado";
 			} else {
 				$this->categoria = "Inválido";
 			}
-
-
-			$this->categoria = $categoria;
 		}
 
 		public function getVitorias(){
 			return $this->vitorias;
 		}
 
-		public function setVitorias($vitorias){
-			$this->vitorias = $vitorias;
+		public function setVitorias(){
+			$this->vitorias += 1;
 		}
 
 		public function getEmpates(){
 			return $this->empates;
 		}
 
-		public function setEmpates($empates){
-			$this->empates = $empates;
+		public function setEmpates(){
+			$this->empates += 1;
 		}
 
 		public function getDerrotas(){
 			return $this->derrotas;
 		}
 
-		public function setDerrotas($derrotas){
-			$this->derrotas = $derrotas;
+		public function setDerrotas(){
+			$this->derrotas += 1;
 		}
 
 		public function apresentar(){
+			echo "<p> ---------------------------------- </p>";
 			echo "Lutador: " . $this->getNome();
 			echo "Origem: " . $this->getNacionalidade();
 			echo "Idade: " . $this->getIdade() . " anos";
@@ -126,6 +122,7 @@
 		}
 
 		public function status(){
+			echo "<p> ---------------------------------- </p>";
 			echo $this->getNome() . "<br>";
 			echo "é um peso " . $this->getCategoria() . "<br>";
 			echo "com " . $this->getVitorias() . " vitorias";
@@ -134,15 +131,15 @@
 		}
 
 		public function ganharLuta(){
-			$this->setVitorias($this->getVitorias() + 1);
+			$this->setVitorias();
 		}
 
 		public function perderLuta(){
-			$this->setDerrotas($this->getDerrotas() + 1);
+			$this->setDerrotas();
 		}
 
 		public function empatarLuta(){
-			$this->setEmpates($this->getEmpates() + 1);
+			$this->setEmpates();
 		}
 	}
 ?>
