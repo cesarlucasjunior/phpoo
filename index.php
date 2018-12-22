@@ -1,6 +1,35 @@
 <pre>
 <?php
-	require_once 'Lutador.php';
+	require_once 'Pessoa.php';
+	require_once 'Livro.php';
+
+
+	$p[0] = new Pessoa("Pedro", 18, 'M');
+	$p[1] = new Pessoa("Fernanda", 27, 'M');
+
+
+	$l[0] = new Livro("Java OCA", "César Júnior", 350, $p[0]);
+	$l[1] = new Livro("Certificação PHP", "César Júnior", 120, $p[1]);
+
+	$l[0]->folhear(80);
+	$l[0]->avancarPagina();
+	$l[0]->avancarPagina();
+	$l[0]->voltarPagina();
+	$l[0]->voltarPagina();
+	$l[0]->detalhes();
+
+
+	$l[1]->detalhes();
+
+?>
+</pre>
+
+
+
+
+	<!--
+
+		require_once 'Lutador.php';
 	require_once 'Luta.php';
 
 	$l = array();
@@ -24,14 +53,10 @@
 	$l[0]->status();
 	$l[1]->status();
 
-
-?>
-</pre>
+	
 
 
 
-
-	<!--
 		$c = new ControleRemoto();
 		$c->ligar();
 		$c->maisVolume();
