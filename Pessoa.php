@@ -8,12 +8,12 @@
 
 
 		//definição de construtores para instanciação automática. Lembrando que pode ser o nome da classe.
-		public function __construct($n, $i, $sx){
-			$this->nome = $n;
-			$this->idade = $i;
-			//$this->dataNascimento = $dt;
-			$this->sexo = $sx;
-		}
+		//public function __construct($n, $i, $sx){
+		//	$this->nome = $n;
+		//	$this->idade = $i;
+		//	//$this->dataNascimento = $dt;
+		//	$this->sexo = $sx;
+		//}
 
 		//Definição dos métodos getter's e setter's da classe Pessoa.
 
